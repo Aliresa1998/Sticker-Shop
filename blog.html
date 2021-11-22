@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="app/vendor/bootstrap/css/bootstrap.rtl.min.css">	
+	<title>وبلاگ</title>
+	<style>	
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+		}
+
+		.bg-img {
+			background-image: url("app/img/blog.jpg");
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			position: relative;
+			color: #000;
+		}
+
+		.top-left {
+			position: absolute;
+			top: 0;
+			left: 16px;
+		}
+
+		.middle {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		h1 {
+			direction: rtl;
+		}
+
+		.demo {
+			font-size: 36px;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="bg-img">
+		<div class="top-left">
+			<p>Logo</p>
+		</div>
+		<div class="middle">
+			<h1> به زودی این بخش در دسترس قرار خواهد گرفت</h1>
+			<p id="demo" class="demo"></p>
+			<a href="index.html" class="btn btn-info text-white">برگشت به صفحه اصلی</a>
+		</div>
+	</div>
+
+
+	<script>
+		var countDownDate = new Date("feb 20, 2022 19:19:19").getTime();
+		var x = setInterval(function () {
+			var now = new Date().getTime();
+			var distance = countDownDate - now;
+
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById("demo").innerHTML = days + " D " + hours + " H "
+				+ minutes + " M " + seconds + " S";
+
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("demo").innerHTML = "EXPIRED";
+			}
+		}, 1000);
+	</script>
+	<noscript>your browser does not support the javascript!!</noscript>
+</body>
+
+</html>

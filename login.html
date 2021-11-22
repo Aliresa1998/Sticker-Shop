@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords"
+		content="استیکر, خرید استیکر,استیکر لپتاپ,خرید استیکر لپتاپ,استیکر اختصاصی,چاپ استیکر,چاپ استیکر اختصاصی,استیکر ارزان,استیکر ساخت ایران,استیکر گوشی,استیکر موبایل,استیکر تبلت,استیکر فروشی">
+	<meta name="description"
+		content="خرید استیکر لپ تاپ و استیکر گوشی در دسته یندی های متنوع|‌ استیکر برنامه نویسی، استیکر فیلم و سریال و ...">
+	<meta name="subject" content="فروشگاه انلاین استیکر">
+	<meta name="owner" content="Neg jahan bakhshian">
+	<meta name="designer" content="Neg jahan bakhshian">
+	<meta name="language" content="fa">
+	<meta name="author" content="Neg jahan bakhshian">
+	<title>عضویت و ورود</title>
+	<link rel="shortcut icon" href="app/img/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="app/css/login-style.css">
+	<!-- [if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif] -->
+</head>
+
+<body>
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form action="#">
+				<h2>عضویت</h2>
+				<input type="text" placeholder="نام">
+				<input type="text" placeholder="نام خانوادگی">
+				<input type="email" placeholder="آدرس ایمیل">
+				<input type="password" placeholder="رمز عبور">
+				<input type="password" placeholder="تکرار رمز عبور">
+				<button type="submit" class="btn btn-reg" name="btn-reg">عضویت</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<h2>ورود به حساب کاربری</h2>
+				<input type="email" placeholder="آدرس ایمیل">
+				<input type="password" placeholder="رمز عبور">
+				<button type="submit" class="btn btn-login" name="btn-login">ورود</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>خوش آمدید</h1>
+					<p>
+						وارد پروفایل خود شوید
+					</p>
+					<button class="ghost" id="signIn">ورود</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>سلام کاربر عزیز</h1>
+					<p>
+						برای ثبت نام در سایت اطلاعات خود را وارد کنید 
+					</p>
+					<button class="ghost" id="signUp">ثبت نام</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		const signUpButton = document.getElementById('signUp');
+		const signInButton = document.getElementById('signIn');
+		const container = document.getElementById('container');
+
+		signUpButton.addEventListener('click', () => {
+			container.classList.add("right-panel-active");
+		});
+
+		signInButton.addEventListener('click', () => {
+			container.classList.remove("right-panel-active");
+		});
+	</script>
+</body>
+
+
+
+</html>
